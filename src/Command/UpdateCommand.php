@@ -46,5 +46,7 @@ class UpdateCommand extends Command
         $converter = new Converter($this->resourceDirectory);
 
         $converter->convertString($fetcher->fetch(), !$input->getOption('no-backup'));
+        
+        return 0;
     }
 }
