@@ -53,6 +53,8 @@ class ConvertCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $this->getConverter()->convertFile($input->getArgument('file'), $input->getOption('no-backup'));
+        
+        return 0;
     }
 
     private function getConverter()
