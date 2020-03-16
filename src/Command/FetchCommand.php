@@ -45,5 +45,7 @@ class FetchCommand extends Command
         $fs = new Filesystem();
         $fetcher = new Fetcher();
         $fs->dumpFile($input->getArgument('file'), $fetcher->fetch());
+        
+        return 0;
     }
 }
