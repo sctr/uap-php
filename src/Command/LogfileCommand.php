@@ -126,6 +126,8 @@ class LogfileCommand extends Command
 
         $fs = new Filesystem();
         $fs->dumpFile($input->getArgument('output'), join(PHP_EOL, $undefinedClients));
+        
+        return 0;
     }
 
     private function outputProgress(OutputInterface $output, $result, $count, $totalCount, $end = false)
