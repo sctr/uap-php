@@ -35,5 +35,7 @@ class ParserCommand extends Command
         $result = Parser::create()->parse($input->getArgument('user-agent'));
 
         $output->writeln(json_encode($result, JSON_PRETTY_PRINT));
+        
+        return 0;
     }
 }
